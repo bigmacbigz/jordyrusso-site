@@ -11,13 +11,19 @@ python3 -m http.server 8080
 
 Open http://localhost:8080
 
-## Deploy to GitHub Pages
+## Live site
 
-1. Create a repo named `jordyrusso.github.io` (or any repo with Pages enabled).
-2. Push this folder's contents to the `main` branch.
-3. In repo **Settings → Pages**, set source to **Deploy from branch** → `main` → `/ (root)`.
+https://bigmacbigz.github.io/jordyrusso-site/
 
-For a project repo (e.g. `my-site`), set `base` paths or use a `docs/` folder — these pages use root-relative links.
+(GitHub Pages may take a minute or two to build after the first push.)
+
+## Repo
+
+https://github.com/bigmacbigz/jordyrusso-site
+
+Pages is configured to deploy from the `main` branch, root `/`.
+
+To use a custom domain later (e.g. `jordyrusso.com`), add it under **Settings → Pages**. To serve from `https://bigmacbigz.github.io` with no path suffix, rename the repo to `bigmacbigz.github.io`.
 
 ## Pages
 
