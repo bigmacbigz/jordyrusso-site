@@ -1,12 +1,16 @@
 (function () {
+  function openMailClient(mailtoUrl) {
+    const temp = document.createElement("a");
+    temp.href = mailtoUrl;
+    document.body.appendChild(temp);
+    temp.click();
+    document.body.removeChild(temp);
+  }
+
   document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      const iframe = document.createElement("iframe");
-      iframe.style.display = "none";
-      iframe.src = link.href;
-      document.body.appendChild(iframe);
-      setTimeout(() => iframe.remove(), 2000);
+      openMailClient(link.getAttribute("href"));
     });
   });
 })();

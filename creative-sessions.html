@@ -8,6 +8,8 @@
 </head>
 <body>
 
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <header class="site-header">
     <a href="index.html" class="logo">
       <span class="logo-bar" aria-hidden="true"></span>
@@ -18,28 +20,28 @@
     </button>
     <nav class="site-nav" aria-label="Site">
       <div class="nav-item">
-        <a href="index.html" class="nav-link">.home</a>
+        <a href="index.html" class="nav-link" data-tooltip="start here">.home</a>
       </div>
       <div class="nav-item">
-        <a href="about.html" class="nav-link">.about</a>
+        <a href="about.html" class="nav-link" data-tooltip="who is jordy?">.about</a>
       </div>
-      <div class="nav-item">
-        <a href="performance.html" class="nav-link is-active">.work</a>
-        <div class="nav-dropdown">
+      <div class="nav-item nav-item--panel">
+        <a href="performance.html" class="nav-link nav-panel-trigger is-active" data-tooltip="things i've made and done">.work</a>
+        <div class="nav-panel" role="group" aria-label="Work">
           <a href="performance.html">.performance</a>
           <a href="creative.html">.creative</a>
           <a href="creative-sessions.html">.creative_sessions</a>
         </div>
       </div>
-      <div class="nav-item">
-        <a href="open-class.html" class="nav-link">.class</a>
-        <div class="nav-dropdown">
+      <div class="nav-item nav-item--panel">
+        <a href="open-class.html" class="nav-link nav-panel-trigger" data-tooltip="learn and book">.class</a>
+        <div class="nav-panel" role="group" aria-label="Class">
           <a href="open-class.html">.open_class</a>
           <a href="bookings.html">.bookings</a>
         </div>
       </div>
       <div class="nav-item">
-        <a href="contact.html" class="nav-link">.contact</a>
+        <a href="contact.html" class="nav-link" data-tooltip="say hello">.contact</a>
       </div>
     </nav>
   </header>
@@ -57,71 +59,130 @@
       <p>every movement is inspired by the people there in the room.</p>
     </div>
 
-    <h2 class="season-heading">season1 | a new beginning</h2>
-    <div class="video-grid">
+    <details class="season-accordion" open>
+      <summary class="season-heading">season1 | a new beginning</summary>
+      <div class="video-grid">
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/p48bHvu0Pl0" title="Babushka Boi | A$AP Rocky" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="p48bHvu0Pl0" data-title="Babushka Boi | A$AP Rocky">
+          <button type="button" class="video-play" aria-label="Play Babushka Boi | A$AP Rocky">
+            <img src="https://img.youtube.com/vi/p48bHvu0Pl0/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Babushka Boi | A$AP Rocky</h3>
       </article>
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/2gVJ9w8IIvM" title="Give It To Me Baby (LIVE) | Rick James" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="2gVJ9w8IIvM" data-title="Give It To Me Baby (LIVE) | Rick James">
+          <button type="button" class="video-play" aria-label="Play Give It To Me Baby (LIVE) | Rick James">
+            <img src="https://img.youtube.com/vi/2gVJ9w8IIvM/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Give It To Me Baby (LIVE) | Rick James</h3>
       </article>
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/D4cp0G64MQY" title="Sky Walker | Miguel feat. Travis Scott" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="D4cp0G64MQY" data-title="Sky Walker | Miguel feat. Travis Scott">
+          <button type="button" class="video-play" aria-label="Play Sky Walker | Miguel feat. Travis Scott">
+            <img src="https://img.youtube.com/vi/D4cp0G64MQY/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Sky Walker | Miguel feat. Travis Scott</h3>
       </article>
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/9MrQJ-VVFvc" title="Sou Sou | Jidenna" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="9MrQJ-VVFvc" data-title="Sou Sou | Jidenna">
+          <button type="button" class="video-play" aria-label="Play Sou Sou | Jidenna">
+            <img src="https://img.youtube.com/vi/9MrQJ-VVFvc/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Sou Sou | Jidenna</h3>
       </article>
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/UsH6qaMp-BY" title="RNP | YBN Cordae feat. Anderson .Paak" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="UsH6qaMp-BY" data-title="RNP | YBN Cordae feat. Anderson .Paak">
+          <button type="button" class="video-play" aria-label="Play RNP | YBN Cordae feat. Anderson .Paak">
+            <img src="https://img.youtube.com/vi/UsH6qaMp-BY/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>RNP | YBN Cordae feat. Anderson .Paak</h3>
       </article>
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/UDdCHFiu-I0" title="Como Un Bebe | J Balvin, Bad Bunny &amp; Mr Eazi" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="UDdCHFiu-I0" data-title="Como Un Bebe | J Balvin, Bad Bunny &amp; Mr Eazi">
+          <button type="button" class="video-play" aria-label="Play Como Un Bebe | J Balvin, Bad Bunny and Mr Eazi">
+            <img src="https://img.youtube.com/vi/UDdCHFiu-I0/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Como Un Bebe | J Balvin, Bad Bunny &amp; Mr Eazi</h3>
       </article>
-    </div>
+      </div>
+    </details>
 
-    <h2 class="season-heading">season2 | back in the habit</h2>
-    <div class="video-grid">
+    <details class="season-accordion">
+      <summary class="season-heading">season2 | back in the habit</summary>
+      <div class="video-grid">
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/tksB8R4uyh8" title="What's The Use? | Mac Miller" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="tksB8R4uyh8" data-title="What's The Use? | Mac Miller">
+          <button type="button" class="video-play" aria-label="Play What's The Use? | Mac Miller">
+            <img src="https://img.youtube.com/vi/tksB8R4uyh8/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>What's The Use? | Mac Miller</h3>
       </article>
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/2BlowMC0cTQ" title="Good Heels | Anderson .Paak feat. Jazmine Sullivan" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="2BlowMC0cTQ" data-title="Good Heels | Anderson .Paak feat. Jazmine Sullivan">
+          <button type="button" class="video-play" aria-label="Play Good Heels | Anderson .Paak feat. Jazmine Sullivan">
+            <img src="https://img.youtube.com/vi/2BlowMC0cTQ/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Good Heels | Anderson .Paak feat. Jazmine Sullivan</h3>
       </article>
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/y7j2QyQQags" title="Wu Tang Forever | Logic feat. Wu Tang Clan" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="y7j2QyQQags" data-title="Wu Tang Forever | Logic feat. Wu Tang Clan">
+          <button type="button" class="video-play" aria-label="Play Wu Tang Forever | Logic feat. Wu Tang Clan">
+            <img src="https://img.youtube.com/vi/y7j2QyQQags/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Wu Tang Forever | Logic feat. Wu Tang Clan</h3>
       </article>
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/kyDM6dsorBQ" title="Ned Flanders | MadeinTYO (STWO Remix)" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="kyDM6dsorBQ" data-title="Ned Flanders | MadeinTYO (STWO Remix)">
+          <button type="button" class="video-play" aria-label="Play Ned Flanders | MadeinTYO (STWO Remix)">
+            <img src="https://img.youtube.com/vi/kyDM6dsorBQ/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Ned Flanders | MadeinTYO (STWO Remix)</h3>
       </article>
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/V2MwOjboA8w" title="Perfect | Logic" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="V2MwOjboA8w" data-title="Perfect | Logic">
+          <button type="button" class="video-play" aria-label="Play Perfect | Logic">
+            <img src="https://img.youtube.com/vi/V2MwOjboA8w/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Perfect | Logic</h3>
       </article>
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/b1NTe_7793s" title="Got Me | Dreamville feat. Ari Lennox" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="b1NTe_7793s" data-title="Got Me | Dreamville feat. Ari Lennox">
+          <button type="button" class="video-play" aria-label="Play Got Me | Dreamville feat. Ari Lennox">
+            <img src="https://img.youtube.com/vi/b1NTe_7793s/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Got Me | Dreamville feat. Ari Lennox</h3>
       </article>
-    </div>
+      </div>
+    </details>
 
-    <h2 class="season-heading">season3 | rise of the machines</h2>
-    <div class="video-grid">
+    <details class="season-accordion">
+      <summary class="season-heading">season3 | rise of the machines</summary>
+      <div class="video-grid">
       <article class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/ZxL0tggY_ks" title="Mi Casa | Kota The Friend" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-embed" data-youtube-id="ZxL0tggY_ks" data-title="Mi Casa | Kota The Friend">
+          <button type="button" class="video-play" aria-label="Play Mi Casa | Kota The Friend">
+            <img src="https://img.youtube.com/vi/ZxL0tggY_ks/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          </button>
+        </div>
         <h3>Mi Casa | Kota The Friend</h3>
       </article>
-    </div>
+      </div>
+    </details>
   </main>
 
+  <script src="js/sessions.js"></script>
   <script src="js/nav.js"></script>
 </body>
 </html>
